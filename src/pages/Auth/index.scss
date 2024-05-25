@@ -2,6 +2,7 @@
   width: $size;
   height: $size;
   line-height: $size;
+  filter: drop-shadow(0 0 6px #bbb);
 }
 
 .m-auth-container {
@@ -12,10 +13,6 @@
   justify-content: center;
   flex-direction: column;
   gap: 5vh;
-
-  .u-auth-logo {
-    opacity: .6;
-  }
 }
 
 // PC

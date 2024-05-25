@@ -1,20 +1,33 @@
 import { lazy } from 'ice';
 
-import DrawerLayout from '@/Layout/Drawer';
+// import DrawerLayout from '@/Layout/Drawer';
+import Layout from '@/Layout';
 
 const Main = lazy(() => import('@/pages/Main'));
 const End = lazy(() => import('@/pages/End'));
 const Auth = lazy(() => import('@/pages/Auth'));
 
-const routerConfig: any[] = [
+const routerConfig: Array<{
+  path: string;
+  component: any;
+  children: Array<{
+    menu?: boolean;
+    path?: string;
+    label?: string;
+    icon?: string;
+    exact?: boolean;
+    component?: any;
+  }>;
+}> = [
   {
     path: '/',
-    component: DrawerLayout,
+    component: Layout,
     children: [
       {
         menu: true,
         path: '/',
         label: '主页',
+        icon: 'io-home',
         exact: true,
         component: Main,
       },
@@ -22,10 +35,12 @@ const routerConfig: any[] = [
         menu: true,
         path: '/end',
         label: '兜底',
+        icon: 'io-setting',
         component: End,
       },
       {
         path: '/auth',
+        icon: 'io-auth',
         component: Auth,
       },
       {

@@ -1,0 +1,27 @@
+.next-shell.o-layout-shell-container {
+
+  // some reset
+  .next-shell-content {
+    height: var(--size-content-h);
+    width: 100%;
+    padding: var(--size-content-p);
+    background-color: white;
+  }
+
+  .next-shell-content-inner {
+    height: var(--size-content-inner-h);
+    overflow: auto;
+  }
+
+  .o-layout-logo {
+    position: relative;
+    width: var(--size-header-logo);
+    height: var(--size-header-logo);
+
+    .o-layout-logo-img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

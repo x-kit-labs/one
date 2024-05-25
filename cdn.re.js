@@ -2,7 +2,7 @@ module.exports = function (props = {}) {
   return {
     ...props,
     // cdn app 标识
-    cdnAppId: 'station',
+    cdnAppId: 'one',
     // cdn 资源文件夹路径
     resourceFolderPath: './build',
     // 需要忽略的文件名

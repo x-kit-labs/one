@@ -1,5 +1,7 @@
-/* @import '@alifd/theme-realign-site/variables.css';
-@import '@alifd/theme-realign-site/dist/next.var.css'; */
+/* @import '@alifd/theme-3/variables.css';
+@import '@alifd/theme-3/dist/next.var.css'; */
+
+@import './styles/global-vars.css';
 
 body {
   -webkit-font-smoothing: antialiased;

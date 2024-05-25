@@ -1,6 +1,6 @@
 {
   "vite": false,
-  "publicPath": "https://public-bucket-electron.nos-eastchina1.126.net/web_cdn/station/",
+  "publicPath": "https://public-bucket-electron.nos-eastchina1.126.net/web_cdn/one/",
   "plugins": [
     [
       "build-plugin-fusion",
