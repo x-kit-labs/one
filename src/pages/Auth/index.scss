@@ -1,0 +1,43 @@
+@mixin logo-size($size) {
+  width: $size;
+  height: $size;
+  line-height: $size;
+}
+
+.m-auth-container {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vh;
+
+  .u-auth-logo {
+    opacity: .6;
+  }
+}
+
+// PC
+@media screen and (min-width: 750px) {
+  .m-auth-container {
+    width: 600px;
+    height: 100%;
+
+    .u-auth-logo {
+      @include logo-size(100px);
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 750px) {
+  .m-auth-container {
+    width: 100vw;
+    height: 100vh;
+
+    .u-auth-logo {
+      @include logo-size(20vw);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@alifd/scaffold-lite",
+  "version": "0.1.0",
+  "description": "轻量级模板，使用 TypeScript，仅包含基础的 Layout。",
+  "dependencies": {
+    "@alifd/next": "1.25.28",
+    "@realign-zone/local-storage": "^1.1.2",
+    "clipboard-paste": "^0.0.5",
+    "moment": "2.29.1",
+    "superagent": "7.1.2"
+  },
+  "devDependencies": {
+    "@alifd/theme-realign-site": "^0.1.0",
+    "@iceworks/spec": "^1.0.0",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "build-plugin-fusion": "^0.1.22",
+    "build-plugin-ignore-style": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "eslint": "^7.30.0",
+    "ice.js": "^2.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "stylelint": "^13.2.0"
+  },
+  "scripts": {
+    "start": "icejs start --port 3321 --mode local",
+    "build": "icejs build --mode prod",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./src",
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint \"**/*.{css,scss,less}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/scaffold-lite"
+  },
+  "private": true,
+  "originTemplate": "@alifd/scaffold-lite"
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" href="https://public.nftstatic.com/static/nft/res/nft-cex/S3/1687441286901_ubhq6lsxl7hatnac7b764ad1luw9adn0.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://alifd.alicdn.com/npm/@alifd/next/1.25.28/next.css">
+    <link rel="stylesheet" href="https://alifd.alicdn.com/npm/@alifd/theme-realign-site/variables.css">
+    <link rel="stylesheet" href="https://alifd.alicdn.com/npm/@alifd/theme-realign-site/dist/next.var.css">
+    <title>中转站 - Station</title>
+  </head>
+
+  <body>
+    <div id="ice-container" class="cls-ice-container"></div>
+  <% if (htmlWebpackPlugin.options.templateParameters.NODE_ENV === 'production') { %>
+    <script src="https://gw.alipayobjects.com/os/lib/react/17.0.2/umd/react.production.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/lib/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+  <% } else { %>
+    <script src="https://gw.alipayobjects.com/os/lib/react/17.0.2/umd/react.development.js"></script>
+    <script src="https://gw.alipayobjects.com/os/lib/react-dom/17.0.2/umd/react-dom.development.js"></script>
+  <% } %>
+    <!-- next -->
+    <script src="https://alifd.alicdn.com/npm/@alifd/next/1.25.28/next.min.js"></script>
+    <!-- moment -->
+    <script src="https://unpkg.com/moment@2.29.1/moment.js"></script>
+    <!-- superagent -->
+    <script src="https://unpkg.com/superagent@7.1.2/dist/superagent.min.js"></script>
+    <!-- @realign-zone/local-storage -->
+    <script src="https://unpkg.com/@realign-zone/local-storage@1.1.2/dist/local-storage.umd.min.js"></script>
+    <!-- clipboard-paste -->
+    <script src="https://unpkg.com/clipboard-paste@0.0.5/dist/clipboard-paste.js"></script>
+  </body>
+</html>
