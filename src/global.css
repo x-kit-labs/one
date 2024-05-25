@@ -1,7 +1,8 @@
-/* @import '@alifd/theme-3/variables.css';
-@import '@alifd/theme-3/dist/next.var.css'; */
+@import '@alifd/theme-one-realign/variables.css';
+@import '@alifd/theme-one-realign/dist/next.var.css';
 
 @import './styles/global-vars.css';
+@import './styles/tailwind-tiny.css';
 
 body {
   -webkit-font-smoothing: antialiased;

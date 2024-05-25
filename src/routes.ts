@@ -4,6 +4,7 @@ import { lazy } from 'ice';
 import Layout from '@/Layout';
 
 const Main = lazy(() => import('@/pages/Main'));
+const Station = lazy(() => import('@/pages/Station'));
 const End = lazy(() => import('@/pages/End'));
 const Auth = lazy(() => import('@/pages/Auth'));
 
@@ -33,9 +34,16 @@ const routerConfig: Array<{
       },
       {
         menu: true,
+        path: '/station',
+        label: '中转站',
+        icon: 'io-electronics',
+        component: Station,
+      },
+      {
+        menu: false,
         path: '/end',
         label: '兜底',
-        icon: 'io-setting',
+        icon: 'io-end',
         component: End,
       },
       {
