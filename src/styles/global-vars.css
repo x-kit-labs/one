@@ -1,7 +1,6 @@
 :root {
-  --size-header-h: 48px;
   --size-header-logo: 26px;
-  --size-content-h: calc(100vh - var(--size-header-h));
+  --size-content-h: calc(100vh - var(--shell-brand-header-height));
   --size-content-p: 0px;
   --size-content-inner-h: calc(var(--size-content-h) - var(--size-content-p) * 2);
 }

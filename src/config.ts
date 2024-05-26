@@ -5,7 +5,7 @@ export default {
   },
   local: {
     // eslint-disable-next-line @iceworks/best-practices/no-http-url
-    server: 'http://localhost:8002',
+    server: 'https://localhost:8001',
   },
   // daily: {
   //   appId: '789',

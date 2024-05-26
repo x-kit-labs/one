@@ -1,6 +1,9 @@
 .next-shell.o-layout-shell-container {
 
   // some reset
+  .next-shell-header {
+    border: 0;
+  }
   .next-shell-content {
     height: var(--size-content-h);
     width: 100%;
