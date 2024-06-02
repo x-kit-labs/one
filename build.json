@@ -34,6 +34,7 @@
     "react": "React",
     "react-dom": "ReactDOM",
     "@alifd/next": "Next",
+    "react-intl": "ReactIntl",
     "superagent": "superagent",
     "@realign-zone/local-storage": "LocalStorage",
     "clipboard-paste": "ClipboardPaste",
