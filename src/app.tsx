@@ -6,7 +6,7 @@ import {
   useLocale,
   getDefaultLocale,
 } from 'ice';
-import { IntlProvider } from 'react-intl';
+import * as ReactIntl from 'react-intl';
 import * as LocalStorage from '@realign-zone/local-storage';
 
 import authRoutes from '@/routes-auth';
@@ -18,14 +18,14 @@ function LocaleProvider({ children }) {
   const defaultLocale = getDefaultLocale();
 
   return (
-    <IntlProvider
+    <ReactIntl.IntlProvider
       //
       messages={i18n[locale]}
       locale={locale}
       defaultLocale={defaultLocale}
     >
       {children}
-    </IntlProvider>
+    </ReactIntl.IntlProvider>
   );
 }
 

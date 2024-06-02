@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Next from '@alifd/next';
 import { Link } from 'ice';
-import { FormattedMessage } from 'react-intl';
+import * as ReactIntl from 'react-intl';
 
 import { STATIC_LOGO, LOCALE_ACTIVE } from '@/constants';
 import { i18n } from '@/i18n';
@@ -80,7 +80,7 @@ export default function Layout({ children }) {
                           marginLeft: '4px',
                         }}
                       >
-                        <FormattedMessage id={labelI18n} />
+                        <ReactIntl.FormattedMessage id={labelI18n} />
                       </span>
                     </Link>
                   </Nav.Item>

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Next from '@alifd/next';
-import { injectIntl, FormattedMessage } from 'react-intl';
+import * as ReactIntl from 'react-intl';
 import * as hotkeys from 'hotkeys-js';
 import MarkdownToJSX from 'markdown-to-jsx';
 import 'wc-waterfall';
@@ -171,7 +171,7 @@ const Note = ({
                   </wc-waterfall>
                 ) : (
                   <div className="m-note-empty">
-                    <FormattedMessage id="o-note-no-data" />
+                    <ReactIntl.FormattedMessage id="o-note-no-data" />
                   </div>
                 )}
               </>
@@ -209,4 +209,4 @@ const Note = ({
   );
 };
 
-export default injectIntl(Note);
+export default ReactIntl.injectIntl(Note);
