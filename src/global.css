@@ -1,6 +1,7 @@
 @import '@alifd/theme-one-realign/variables.css';
 @import '@alifd/theme-one-realign/dist/next.var.css';
 
+@import './styles/override-next.css';
 @import './styles/global-vars.css';
 @import './styles/tailwind-tiny.css';
 

@@ -1,6 +1,6 @@
-import React, { CSSProperties } from 'react';
+import * as React from 'react';
 import * as Next from '@alifd/next';
-import ClipboardPaste from 'clipboard-paste';
+import * as ClipboardPaste from 'clipboard-paste';
 
 import { queryMimetype, queryText, uploadFile } from '@/api';
 import { createFile, upload, copy } from '@/utils';
@@ -8,7 +8,7 @@ import { createFile, upload, copy } from '@/utils';
 import './index.scss';
 
 const idPaste = 'j-s-paste';
-const mediaStyle: CSSProperties = {
+const mediaStyle: React.CSSProperties = {
   maxWidth: '100%',
   maxHeight: '100%',
 };

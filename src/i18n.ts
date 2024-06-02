@@ -1,0 +1,36 @@
+export const i18n = {
+  'en-US': {
+    'o-ok': 'OK',
+    'o-cancel': 'Cancel',
+    'o-shell-home': 'Home',
+    'o-shell-station': 'Station',
+    'o-shell-note': 'Note',
+    'o-note-no-data': 'No note',
+    'o-note-hotkey-tip-key': 'HotKey',
+    'o-note-hotkey-tip-desc': 'Intro',
+    'o-note-hotkey-add': 'Create note',
+    'o-note-hotkey-save': 'Save note',
+    'o-note-hotkey-edit': 'Edit note[Select before operation]',
+    'o-note-hotkey-delete': 'Delete note[Select before operation]',
+    'o-note-delete-confirm-title': 'Tip',
+    'o-note-delete-confirm-content': 'Are you sure you want to delete this record?',
+  },
+  'zh-CN': {
+    'o-ok': '确认',
+    'o-cancel': '取消',
+    'o-shell-home': '首页',
+    'o-shell-station': '驿站',
+    'o-shell-note': '笔记',
+    'o-note-no-data': '无数据',
+    'o-note-hotkey-tip-key': '快捷键',
+    'o-note-hotkey-tip-desc': '说明',
+    'o-note-hotkey-add': '新建笔记',
+    'o-note-hotkey-save': '保存笔记',
+    'o-note-hotkey-edit': '编辑笔记【需要先选中】',
+    'o-note-hotkey-delete': '删除笔记【需要先选中】',
+    'o-note-delete-confirm-title': '提示',
+    'o-note-delete-confirm-content': '你确定要删除这条记录吗?',
+  },
+};
+
+export const localeList = Object.keys(i18n).map((k) => k);

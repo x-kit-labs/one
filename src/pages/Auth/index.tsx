@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import * as Next from '@alifd/next';
+import * as LocalStorage from '@realign-zone/local-storage';
 
 import { queryAuth } from '@/api';
-import LocalStorage from '@realign-zone/local-storage';
-import { LS_K, STATIC_LOGO } from '@/constants';
+import { LS_AUTH_K, STATIC_LOGO } from '@/constants';
 
 import './index.scss';
 
@@ -25,7 +25,7 @@ const Auth = () => {
   const handleSubmit = async (values, errors) => {
     if (errors === null) {
       const x = await queryAuth(values.authKey);
-      LocalStorage.set(LS_K, x.success ? values.authKey : '', { cover: true });
+      LocalStorage.set(LS_AUTH_K, x.success ? values.authKey : '', { cover: true });
       location.reload();
     }
   };

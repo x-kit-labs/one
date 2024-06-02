@@ -1,8 +1,10 @@
 import * as superagent from 'superagent';
 
-export async function queryAuth(authKey) {
+import { STATIC_JSON_PRE } from '@/constants';
+
+export async function queryAllNotes() {
   try {
-    const url = `https://public-bucket-realign.nos-eastchina1.126.net/json/${authKey}.json`;
+    const url = `${STATIC_JSON_PRE}/web_one_notes.json`;
     const res = await superagent.get(url);
     const resObj = JSON.parse(res.text);
     return resObj;

@@ -3,6 +3,15 @@
   "publicPath": "https://public-bucket-electron.nos-eastchina1.126.net/web_cdn/one/",
   "plugins": [
     [
+      "build-plugin-ice-i18n",
+      {
+        "locales": ["en-US", "zh-CN"],
+        "defaultLocale": "en-US",
+        "i18nRouting": true,
+        "autoRedirect": false
+      }
+    ],
+    [
       "build-plugin-fusion",
       {
         "externalNext": true
@@ -11,9 +20,7 @@
     [
       "build-plugin-moment-locales",
       {
-        "locales": [
-          "zh-cn"
-        ]
+        "locales": ["en-US", "zh-CN"]
       }
     ],
     [
@@ -27,10 +34,10 @@
     "react": "React",
     "react-dom": "ReactDOM",
     "@alifd/next": "Next",
-    "moment": "moment",
     "superagent": "superagent",
     "@realign-zone/local-storage": "LocalStorage",
-    "crypto-js": "CryptoJS",
-    "clipboard-paste": "ClipboardPaste"
+    "clipboard-paste": "ClipboardPaste",
+    "markdown-to-jsx": "MarkdownToJSX",
+    "hotkeys-js": "hotkeys"
   }
 }

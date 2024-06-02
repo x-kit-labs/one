@@ -1,0 +1,74 @@
+.m-note {
+  &-container {
+    //
+  }
+
+  &-inner {
+    margin: 30px;
+  }
+
+  &-hotkeys_balloon {
+    position: fixed;
+    bottom: 18px;
+    right: 4px;
+  }
+
+  &-refresh_tip {
+    position: fixed;
+    bottom: 4px;
+    right: 4px;
+    color: #ccc;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &-empty {
+    color: #ddd;
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 30vh;
+  }
+
+  &-dialog {
+    .next-dialog.next-overlay-inner {
+      width: 400px;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .next-dialog-footer {
+      display: none;
+    }
+
+    &-sign {
+      position: absolute;
+      top: 26px;
+      left: 26px;
+      color: #e8e8e8;
+      font-size: 60px;
+      font-weight: bold;
+      font-family: cursive;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &-textarea {
+      width: 100%;
+      background-color: transparent;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+
+      &.next-focus {
+        background-color: rgba(0, 0, 0, .05);
+      }
+
+      &>textarea {
+        padding: 0 4px !important;
+        font-size: 16px !important;
+        line-height: 28px !important;
+      }
+    }
+  }
+}
