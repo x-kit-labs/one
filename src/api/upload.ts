@@ -6,7 +6,7 @@ export async function uploadFile(file) {
   try {
     const res = await superagent
       //
-      .post(`${BASE_URL}/o/station/upload`)
+      .post(`${BASE_URL}/openapi/station/upload`)
       .attach('file', file);
     return res;
   } catch (e) {
