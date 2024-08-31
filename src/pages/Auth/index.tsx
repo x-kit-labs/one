@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as Next from '@alifd/next';
+import * as ReactIntl from 'react-intl';
 import * as LocalStorage from '@realign-zone/local-storage';
 
 import { queryAuth } from '@/api';
@@ -21,7 +22,7 @@ const FormProps = {
   style: { width: '50%' },
 };
 
-const Auth = () => {
+const Auth = ({ intl }: { intl: any }) => {
   const handleSubmit = async (values, errors) => {
     if (errors === null) {
       const x = await queryAuth(values.authKey);
@@ -40,16 +41,17 @@ const Auth = () => {
       />
       <Next.Form size="large" {...FormProps}>
         <FormItem name="authKey" label="" required requiredMessage="🙄🙄🙄🙄🙄🙄">
-          <Next.Input.Password placeholder="访问密码" />
+          <Next.Input.Password placeholder="******" />
         </FormItem>
         <FormItem label="" style={{ textAlign: 'center' }} colon={false}>
           <Next.Form.Submit
             //
-            type="primary"
             validate
+            type="primary"
+            htmlType="submit"
             onClick={handleSubmit}
           >
-            开启
+            {intl.formatMessage({ id: 'o-auth-enter' })}
           </Next.Form.Submit>
         </FormItem>
       </Next.Form>
@@ -57,4 +59,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default ReactIntl.injectIntl(Auth);

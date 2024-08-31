@@ -6,6 +6,8 @@ import Layout from '@/Layout';
 const Main = lazy(() => import('@/pages/Main'));
 const Station = lazy(() => import('@/pages/Station'));
 const Note = lazy(() => import('@/pages/Note'));
+const Code = lazy(() => import('@/pages/Code'));
+const Work = lazy(() => import('@/pages/Work'));
 
 const End = lazy(() => import('@/pages/End'));
 const Auth = lazy(() => import('@/pages/Auth'));
@@ -47,6 +49,20 @@ const routerConfig: Array<{
         labelI18n: 'o-shell-note',
         icon: 'io-survey',
         component: Note,
+      },
+      {
+        menu: true,
+        path: '/code',
+        labelI18n: 'o-shell-code',
+        icon: 'io-code',
+        component: Code,
+      },
+      {
+        menu: true,
+        path: '/work',
+        labelI18n: 'o-shell-work',
+        icon: 'io-work',
+        component: Work,
       },
       {
         menu: false,

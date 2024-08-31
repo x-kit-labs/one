@@ -7,13 +7,14 @@ import { STATIC_LOGO, LOCALE_ACTIVE } from '@/constants';
 import { i18n } from '@/i18n';
 import { useScreenType } from '@/hooks';
 import { CustomIcons } from '@/components/Icons';
+import AuthControl from '@/components/AuthControl';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 
 import { getKeyByPath, getMenuData } from './menu';
 
 import './index.scss';
 
-const { ConfigProvider, Nav, Shell } = Next;
+const { ConfigProvider, Nav, Shell, Divider } = Next;
 
 export default function Layout({ children }) {
   const menuData = getMenuData();
@@ -22,6 +23,7 @@ export default function Layout({ children }) {
   const { type } = useScreenType();
 
   const [stateSelectedKey, setStateSelectedKey] = React.useState(currentRouteKey);
+  const [navCollapse, setNavCollapse] = React.useState(true);
 
   return (
     <ConfigProvider
@@ -47,9 +49,16 @@ export default function Layout({ children }) {
         </Shell.Branding>
         <Shell.Action>
           <LocaleSwitcher />
+          <Divider direction="ver" />
+          <AuthControl />
         </Shell.Action>
 
-        <Shell.Navigation>
+        <Shell.Navigation
+          collapse={navCollapse}
+          onCollapseChange={() => {
+            setNavCollapse(!navCollapse);
+          }}
+        >
           {menuData?.length ? (
             <Nav
               embeddable

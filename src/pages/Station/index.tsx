@@ -1,9 +1,11 @@
 import * as React from 'react';
 import * as Next from '@alifd/next';
+import * as ReactIntl from 'react-intl';
 import * as ClipboardPaste from 'clipboard-paste';
 
+import { useCopy } from '@/hooks';
 import { queryMimetype, queryText, uploadFile } from '@/api';
-import { createFile, upload, copy } from '@/utils';
+import { createFile, upload } from '@/utils';
 
 import './index.scss';
 
@@ -13,7 +15,8 @@ const mediaStyle: React.CSSProperties = {
   maxHeight: '100%',
 };
 
-const Station = () => {
+const Station = ({ intl }: { intl: any }) => {
+  const { copy } = useCopy();
   const [pasteFocus, setPasteFocus] = React.useState(false);
   const [txtX, setTxtX] = React.useState('');
   const [imgX, setImgX] = React.useState('');
@@ -52,7 +55,7 @@ const Station = () => {
   };
 
   const copyLatestEvt = () => {
-    copy(txtX, true);
+    copy(txtX);
   };
 
   const confirmEvt = async (val) => {
@@ -80,7 +83,7 @@ const Station = () => {
         if (type.startsWith('text/') && kind === 'string') {
           confirmEvt(content);
         } else {
-          Next.Message.notice('剪贴板内容不是文字，请检查～');
+          Next.Message.error(intl.formatMessage({ id: 'o-station-content-in-clipboard-is-not-text' }));
         }
       }
       blurInputEnabledField();
@@ -110,7 +113,11 @@ const Station = () => {
                   }}
                 >
                   <Next.Icon type="copy" size="xxxl" />
-                  {pasteFocus && <div style={{ position: 'absolute', bottom: '0' }}>请粘贴</div>}
+                  {pasteFocus && (
+                    <div style={{ position: 'absolute', bottom: '0' }}>
+                      {intl.formatMessage({ id: 'o-station-paste-now' })}
+                    </div>
+                  )}
                 </div>
               </div>
               {/* Mobile: input */}
@@ -203,4 +210,4 @@ const Station = () => {
   );
 };
 
-export default Station;
+export default ReactIntl.injectIntl(Station);

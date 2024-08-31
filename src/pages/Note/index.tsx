@@ -29,12 +29,7 @@ import './index.scss';
 
 const HotKeys = hotkeys.default;
 
-const Note = ({
-  //
-  intl,
-}: {
-  intl: any;
-}) => {
+const Note = ({ intl }: { intl: any }) => {
   const { type } = useScreenType();
 
   const noteListRef = React.useRef<any[]>([]);

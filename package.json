@@ -7,6 +7,7 @@
     "@realign-zone/local-storage": "^1.1.2",
     "clipboard-paste": "^0.0.5",
     "hotkeys-js": "3.13.7",
+    "js-base64": "^3.7.7",
     "markdown-to-jsx": "7.4.7",
     "moment": "2.29.1",
     "react-intl": "^6.6.8",

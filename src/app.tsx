@@ -13,6 +13,8 @@ import authRoutes from '@/routes-auth';
 import { LS_AUTH_K } from '@/constants';
 import { i18n } from '@/i18n';
 
+import './styles/custom.scss';
+
 function LocaleProvider({ children }) {
   const [locale] = useLocale();
   const defaultLocale = getDefaultLocale();
