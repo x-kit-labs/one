@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import * as React from 'react';
+
+export type T_ScreenType = 'phone' | 'tablet' | 'desktop';
 
 export const useScreenType = () => {
-  const [type, setType] = useState<'phone' | 'tablet' | 'desktop'>('desktop');
+  const [type, setType] = React.useState<T_ScreenType>('desktop');
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleResize = () => {
       if (window.matchMedia('(max-width: 767px)').matches) {
         setType('phone');

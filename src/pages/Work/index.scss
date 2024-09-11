@@ -1,0 +1,12 @@
+.m-work {
+  &-container {
+    width: 860px;
+    margin: 24px auto 0;
+
+    .next-radio-button-large {
+      .next-radio-wrapper {
+        padding: 0 14px;
+      }
+    }
+  }
+}

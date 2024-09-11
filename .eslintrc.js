@@ -1,4 +1,4 @@
-const { getESLintConfig } = require('@iceworks/spec')
+const { getESLintConfig } = require('@iceworks/spec');
 
 module.exports = getESLintConfig('react-ts', {
   rules: {
@@ -9,5 +9,8 @@ module.exports = getESLintConfig('react-ts', {
     '@typescript-eslint/semi': [2, 'always'],
 
     '@iceworks/best-practices/no-js-in-ts-project': 0,
+    //
+    '@typescript-eslint/indent': 0,
+    'prefer-arrow-callback': 0,
   },
-})
+});

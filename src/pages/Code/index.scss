@@ -1,0 +1,8 @@
+.m-code {
+  &-container {
+    width: 860px;
+    height: 100%;
+    margin: 0 auto;
+    padding: var(--divider-hoz-text-marginTop, 16px) 0;
+  }
+}

@@ -1,4 +1,4 @@
-import superagent from 'superagent';
+import * as superagent from 'superagent';
 
 export async function queryAuth(authKey) {
   try {

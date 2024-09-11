@@ -1,12 +1,13 @@
-// import { Icon } from '@alifd/next';
+import * as React from 'react';
 
-// export const CustomIcons = Icon.createFromIconfontCN({
-//   scriptUrl: '//at.alicdn.com/t/c/font_4561712_dfhibujujke.js',
-// });
-
-import React, { CSSProperties } from 'react';
-
-export const CustomIcons = ({ type, style }: { type: string; style?: CSSProperties }) => {
+export const CustomIcons = ({
+  //
+  type,
+  style,
+}: {
+  type: string;
+  style?: React.CSSProperties;
+}) => {
   return (
     <i className="next-icon next-medium">
       <svg className="next-icon-remote" focusable="false" style={style}>
