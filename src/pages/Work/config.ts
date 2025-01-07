@@ -1,4 +1,6 @@
+export type T_BizType = 'post' | 'article' | 'profile' | 'hashtag';
 export const BizConfig = {
+  appLinkPrefix: 'bnc://app.binance.com',
   linkPrefix: 'bnc://app.binance.com/mp/app',
   appId: 'znf9fpiMh6ufdU3vDtAvi4',
   post: {
@@ -12,6 +14,10 @@ export const BizConfig = {
   profile: {
     startPath: 'cGFnZXMvYnV6ei1wcm9maWxlL2luZGV4',
     idKey: 'username',
+  },
+  hashtag: {
+    startPath: '/content/topicdetails',
+    idKey: 'hashTag',
   },
 };
 
@@ -43,13 +49,18 @@ export const formConfigData = {
         value: 'profile',
         label: 'User Profile',
       },
+      {
+        value: 'hashtag',
+        label: 'HashTag',
+      },
     ],
     shape: 'button' as any,
   },
 };
 
-export const formItemBizIdPreMap = {
+export const formItemBizIdPreMap: Record<T_BizType, string> = {
   post: 'postId=',
   article: 'articleId=',
   profile: 'username=',
+  hashtag: 'hashTag=',
 };

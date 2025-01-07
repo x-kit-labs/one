@@ -36,7 +36,12 @@ const Work = ({ intl }: { intl: any }) => {
         attachStr: values.attachParams || '',
       });
       setResPreview(res);
-      setResReviewCheck(generateDeFn(res));
+      setResReviewCheck(
+        generateDeFn({
+          type: values.type,
+          str: res,
+        }),
+      );
     }
   };
   return (
